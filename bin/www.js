@@ -31,6 +31,7 @@ server.listen(port);
 server.on("error", onError);
 server.on("listening", onListening);
 
+
 /**
  * Normalize a port into a number, string, or false.
  */
@@ -85,4 +86,5 @@ function onListening() {
   const addr = server.address();
   const bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
   debug("Listening on " + bind);
+  console.log(`listening on ${port}`)
 }
